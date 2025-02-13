@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #00274d;
+}
+
+.container {
+  background-color: #fff;
+  max-width: 410px;
+  height: 16.25rem;
+  border-radius: 0.25rem;
+  padding: 1rem 1.5rem;
+  transition: height 0.2s ease;
+}
+
+.container.show {
+  height: 33.125rem;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+header p {
+  font-size: 1rem;
+  color: #4c4c4c;
+  margin-top: 0.325rem;
+}
+
+.container .input-wrapper {
+  margin: 1.25rem 0 1.5rem;
+}
+
+.input-wrapper :where(input, button) {
+  width: 100%;
+  height: 3.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.25rem;
+}
+
+.input-wrapper input {
+  font-size: 1.125rem;
+  padding: 0 1rem;
+  border: 1px solid #999;
+}
+
+.input-wrapper button {
+  color: #fff;
+  cursor: pointer;
+  margin-top: 1.25rem;
+  background-color: #00274d;
+  font-size: 1rem;
+}
+
+.container .qr-code {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  border-radius: 0.25rem;
+  padding: 2.125rem 0;
+  border: 1px solid #ccc;
+}
+
+.container.show .qr-code {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s 0.05s ease;
+}
